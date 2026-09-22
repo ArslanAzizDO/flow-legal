@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow — Privacy Policy</title>
+<link rel="stylesheet" href="style.css">
+
+<h1>Privacy Policy — Flow</h1>
+<p class="meta">Flow — 90s Music Visualizer · <code>com.tidoo.flow</code> · Last updated 22 September 2026</p>
+
+<p>Flow is a music visualizer. It draws pictures from audio that is already playing
+on your phone. This policy explains, in plain terms, what the app touches and what
+leaves your device.</p>
+
+<h2>The short version</h2>
+<ul>
+  <li><strong>Audio is never recorded, stored, or uploaded.</strong> It is analysed as
+      it plays and thrown away.</li>
+  <li><strong>Flow has no account, no login, and no analytics.</strong></li>
+  <li>The only data that leaves your phone is what Google Play and RevenueCat need to
+      process and restore a purchase.</li>
+</ul>
+
+<h2>Audio</h2>
+<p>With your permission, Flow captures the audio other apps are playing, using
+Android's <em>playback capture</em> feature. Each short chunk of audio is turned into
+numbers (levels and frequencies) to drive the visuals, then discarded. Nothing is
+written to storage and nothing is transmitted. Flow never uses the microphone.</p>
+<p>Granting capture requires two Android prompts: the microphone permission (Android
+requires it for this audio API even though the microphone is never used) and the
+screen-share dialog that issues the capture token. You can revoke either at any time
+in Android Settings.</p>
+
+<h2>Track title and cover art (optional)</h2>
+<p>If — and only if — you turn it on yourself, Flow reads the media session of the app
+that is playing, to show the track title, artist and cover art. Android exposes media
+sessions through notification access, so the app declares a notification listener for
+that purpose alone.</p>
+<p><strong>Flow does not read your notifications.</strong> The listener component
+deliberately implements none of the notification callbacks; it exists only because the
+platform will not hand over media sessions otherwise. Titles and artwork are shown on
+screen and never stored or transmitted. The feature is off until you enable it, and
+turning it off in Android Settings stops it immediately.</p>
+
+<h2>Purchases</h2>
+<p>Purchases are handled by Google Play. Flow uses
+<a href="https://www.revenuecat.com/privacy">RevenueCat</a> to check whether a purchase
+is active and to restore it on a new device. For that, RevenueCat receives a random
+app-generated user id, your purchase receipt information, and basic device and country
+information. Flow never sees or stores your payment details.</p>
+
+<table>
+  <tr><th>Data</th><th>Why</th><th>Leaves the device?</th></tr>
+  <tr><td>Captured audio</td><td>Drawing the visuals</td><td>No</td></tr>
+  <tr><td>Track title, artist, cover art</td><td>Showing what is playing (opt-in)</td><td>No</td></tr>
+  <tr><td>Purchase receipt, random user id, device/country</td><td>Unlocking and restoring purchases</td><td>Yes — Google Play and RevenueCat</td></tr>
+</table>
+
+<h2>Children</h2>
+<p>Flow is not directed at children and collects no personal information from anyone.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>Revoke audio capture or notification access at any time in Android Settings.</li>
+  <li>Manage or cancel a subscription in Google Play → Payments &amp; subscriptions.</li>
+  <li>To have purchase records deleted, contact us at the address below; we will ask
+      RevenueCat to delete the associated app user id.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date at the top changes with it.</p>
+
+<h2>Contact</h2>
+<p><a href="mailto:flow.visualizer.app@gmail.com">flow.visualizer.app@gmail.com</a></p>
+</html>
