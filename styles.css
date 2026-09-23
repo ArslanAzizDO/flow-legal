@@ -1,0 +1,324 @@
+/*
+ * Flow landing page. One stylesheet for every page, no external requests.
+ *
+ * Dark on purpose: the kit's landing template is light, but Flow is a
+ * dark-only app built around a pure-black canvas, and a white page in front
+ * of it reads as a different product.
+ */
+:root {
+  --bg: #000000;
+  --surface: #0b0b12;
+  --surface-2: #12121c;
+  --line: #1f1f2c;
+  --text: #e8e8f2;
+  --muted: #9a9ab0;
+  --faint: #5c5c72;
+  --accent: #667fe5;   /* BrandPrimary */
+  --accent-2: #4ce0b3; /* BrandPrimaryBright */
+  --radius: 14px;
+  --mono: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 var(--sans);
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; display: block; }
+
+.wrap {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ---- header -------------------------------------------------------------- */
+
+.site-header {
+  padding: 22px 0;
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font: 600 15px var(--mono);
+  letter-spacing: 0.04em;
+}
+.brand:hover { text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 8px; }
+
+.back {
+  font: 13px var(--mono);
+  color: var(--muted);
+}
+
+/* ---- hero ---------------------------------------------------------------- */
+
+.hero {
+  text-align: center;
+  padding: 56px 0 28px;
+}
+
+.hero .icon {
+  width: 88px;
+  height: 88px;
+  margin: 0 auto 26px;
+  border-radius: 22px;
+  box-shadow: 0 0 60px rgba(102, 127, 229, 0.35);
+}
+
+.eyebrow {
+  font: 600 12px var(--mono);
+  letter-spacing: 0.16em;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 7vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+
+.hero .tagline {
+  color: var(--muted);
+  font-size: 19px;
+  max-width: 520px;
+  margin: 0 auto 30px;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+.cta:hover { text-decoration: none; filter: brightness(1.1); }
+.cta svg { width: 18px; height: 18px; }
+
+.cta-note {
+  margin: 14px 0 0;
+  font: 13px var(--mono);
+  color: var(--faint);
+}
+
+/* ---- screenshots ---------------------------------------------------------- */
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 46px 0 8px;
+}
+
+.shots img {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  width: 100%;
+  height: auto;
+}
+
+.shots-pair {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 470px;
+  margin: 0 auto;
+}
+.shots.shots-pair img:nth-child(2) { transform: none; }
+
+/* The middle shot sits forward, so the row reads as a set rather than a grid. */
+.shots img:nth-child(2) { transform: translateY(-14px); }
+
+/* ---- sections --------------------------------------------------------------- */
+
+section { padding: 44px 0; }
+
+section h2 {
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+.section-lead {
+  color: var(--muted);
+  margin: 0 0 26px;
+}
+
+.features {
+  display: grid;
+  gap: 12px;
+}
+
+.feature {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.feature h3 {
+  margin: 0 0 4px;
+  font-size: 17px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15.5px;
+}
+
+.works-with {
+  font: 14px var(--mono);
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.works-with strong { color: var(--text); font-weight: 600; }
+
+.note {
+  background: var(--surface-2);
+  border-left: 3px solid var(--accent-2);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 14px 18px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.plan {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+}
+
+.plan h3 { margin: 0 0 4px; font-size: 17px; }
+.plan p { margin: 0; color: var(--muted); font-size: 15px; }
+
+/* ---- contact ------------------------------------------------------------------ */
+
+.contact a.email {
+  font: 600 17px var(--mono);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.socials a {
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font: 13px var(--mono);
+  color: var(--muted);
+}
+
+/* ---- footer ----------------------------------------------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  margin-top: 30px;
+  padding: 26px 0 40px;
+  font: 13px var(--mono);
+  color: var(--faint);
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.site-footer nav a { color: var(--muted); margin-right: 18px; }
+
+/* ---- legal pages ------------------------------------------------------------------ */
+
+.legal { padding: 20px 0 30px; }
+
+.legal h1 {
+  font-size: clamp(28px, 5vw, 36px);
+  letter-spacing: -0.01em;
+  margin: 10px 0 6px;
+}
+
+.legal .meta {
+  font: 13px var(--mono);
+  color: var(--faint);
+  margin: 0 0 28px;
+}
+
+.legal h2 {
+  font-size: 19px;
+  margin: 34px 0 8px;
+}
+
+.legal p, .legal li { color: #c9c9d8; }
+
+.legal code {
+  font: 0.9em var(--mono);
+  background: var(--surface-2);
+  padding: 1px 6px;
+  border-radius: 5px;
+}
+
+.legal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 15px;
+}
+
+.legal th, .legal td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.legal th { background: var(--surface); color: var(--text); }
+
+/* ---- small screens ------------------------------------------------------------------ */
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .hero { padding-top: 36px; }
+  .shots { gap: 8px; }
+  .shots img:nth-child(2) { transform: translateY(-8px); }
+  .pricing { grid-template-columns: 1fr; }
+}

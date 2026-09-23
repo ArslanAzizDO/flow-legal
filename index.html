@@ -1,16 +1,139 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Flow — 90s Music Visualizer</title>
-<link rel="stylesheet" href="style.css">
-<h1>Flow — 90s Music Visualizer</h1>
-<p class="meta">Android app · <code>com.tidoo.flow</code></p>
-<p>Flow turns audio already playing on your phone into full-screen, reactive
-visuals, in the style of Winamp's MilkDrop.</p>
-<ul>
-  <li><a href="privacy.html">Privacy Policy</a></li>
-  <li><a href="terms.html">Terms of Use</a></li>
-</ul>
-<p>Support: <a href="mailto:flow.visualizer.app@gmail.com">flow.visualizer.app@gmail.com</a></p>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow — 90s Music Visualizer for Android</title>
+  <meta name="description" content="Winamp-style music visualizer that reacts to whatever app you're playing. 23 visualizers, true MilkDrop-style feedback, 60 fps, pure black for AMOLED.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon.png" alt="">FLOW</a>
+    <a class="back" href="#contact">contact</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <img class="icon" src="assets/icon.png" alt="Flow app icon: a neon spiral">
+      <p class="eyebrow">90s music visualizer</p>
+      <h1>Your music,<br>drawn live.</h1>
+      <p class="tagline">Winamp-style visuals that react to whatever app you're playing — Spotify, YouTube Music, your offline library. No importing, no separate player.</p>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=com.tidoo.flow">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6 4.5v15a1 1 0 0 0 1.5.86l12.4-7.5a1 1 0 0 0 0-1.72L7.5 3.64A1 1 0 0 0 6 4.5z"/></svg>
+        Get it on Google Play
+      </a>
+      <p class="cta-note">Android 10 or newer · 3 visualizers free forever</p>
+
+      <div class="shots">
+        <img src="assets/vortex.jpg" width="540" height="1200" alt="Vortex visualizer: neon spiral trails reacting to music">
+        <img src="assets/kaleidoscope.jpg" width="540" height="1200" alt="Kaleidoscope visualizer: a mirrored mandala blooming outward">
+        <img src="assets/nebula.jpg" width="540" height="1200" alt="Nebula visualizer: smoky bands of colour moving with the bass">
+      </div>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="wrap">
+      <h2>Remember Winamp melting your screen at 2am?</h2>
+      <p class="section-lead">That, in your pocket, on whatever you're streaming.</p>
+
+      <div class="features">
+        <article class="feature">
+          <h3>Reacts to any app</h3>
+          <p>Flow listens to the audio already playing on your phone and draws it. Start your music first, open Flow, watch.</p>
+        </article>
+        <article class="feature">
+          <h3>True MilkDrop-style feedback</h3>
+          <p>Every frame warps the one before it, so trails, spirals and smoke build up for real instead of being faked with blur.</p>
+        </article>
+        <article class="feature">
+          <h3>Hits with the bass</h3>
+          <p>Real audio analysis — 160 frequency bands and beat detection. Shapes jump on the kick, colours change on the beat.</p>
+        </article>
+        <article class="feature">
+          <h3>23 visualizers</h3>
+          <p>Spirals, kaleidoscopes, smoke, bass-drop rings, tiling mandalas, plus an exact spectrum analyzer and oscilloscope.</p>
+        </article>
+        <article class="feature">
+          <h3>Built for AMOLED</h3>
+          <p>Pure black backgrounds, so your screen only lights what's drawn. 60 fps at full resolution, portrait or landscape.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="shots shots-pair">
+        <img src="assets/ghost.jpg" width="540" height="1200" alt="Ghost visualizer: a glowing shape trailing soft smoke">
+        <img src="assets/picker.jpg" width="540" height="1200" alt="The preset list, long-press to open">
+      </div>
+    </div>
+  </section>
+
+  <section id="works-with">
+    <div class="wrap">
+      <h2>Works with the apps you already use</h2>
+      <p class="works-with">
+        <strong>Confirmed:</strong> Spotify · YouTube Music · YouTube · Deezer · VLC · Chrome · offline music players
+      </p>
+      <p class="note">
+        One honest limitation: any app can opt out of Android's playback capture, and a few do —
+        SoundCloud is one. When that happens Flow tells you on screen instead of pretending.
+      </p>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <h2>Free to try, yours to keep</h2>
+      <p class="section-lead">No account, no ads, no sign-up.</p>
+      <div class="pricing">
+        <div class="plan">
+          <h3>Free</h3>
+          <p>Vortex, Bars and Scope — free forever, not a trial.</p>
+        </div>
+        <div class="plan">
+          <h3>Flow Premium</h3>
+          <p>All 23 visualizers and every one added later. Weekly with a free trial, or a one-time lifetime unlock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <h2>Your audio never leaves your phone</h2>
+      <p class="section-lead">Flow analyses sound as it plays and throws it away. Nothing is recorded, stored or uploaded, and the microphone is never used. Android asks you to share your screen when you start — that's how the system hands the audio over.</p>
+      <a href="privacy.html">Read the privacy policy →</a>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="section-lead">Questions, bugs, or a preset idea — write in.</p>
+      <a class="email" href="mailto:flow.visualizer.app@gmail.com">flow.visualizer.app@gmail.com</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+    <span>© 2026 Tidoo · Flow</span>
+  </div>
+</footer>
+
+</body>
 </html>
